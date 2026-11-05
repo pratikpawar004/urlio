@@ -1,246 +1,155 @@
-\# URLIO
+# URLIO
 
+### Short links. Simple sharing.
 
+A lightweight URL shortener built with **PHP, MySQL, and a responsive web interface**.
 
-\### Short links. Simple sharing.
+🌐 **Live Website:** [https://pawar.rf.gd/urlio/](https://pawar.rf.gd/urlio/)
 
+---
 
+## About
 
-A lightweight URL shortener built with \*\*PHP, MySQL, and a responsive web interface\*\*.
+**URLIO** is a web-based URL shortener that transforms long URLs into short, easy-to-share links. Create links as a guest or sign in to manage your links from your personal dashboard.
 
+## Features
 
+- **Guest Shortening** – Create short links without registration.
+- **User Accounts** – Register, log in, and manage your links.
+- **Guest Link Transfer** – Transfer guest-created links to your account.
+- **Bulk Shortening** – Shorten multiple URLs at once.
+- **Custom Aliases** – Create memorable custom short links.
+- **Link Expiry** – Set link expiration dates.
+- **Click Limits** – Configure maximum clicks.
+- **Password Protection** – Protect selected short links.
+- **Analytics** – View click statistics and visitor information.
+- **QR Codes** – Generate QR codes for your links.
+- **CSV Export** – Export link and click data.
+- **Admin Panel** – Manage users, links, and blocked domains.
+- **Responsive Design** – Works on desktop and mobile.
 
-🌐 \*\*Live Website:\*\* https://pawar.rf.gd/urlio/
+## Tech Stack
 
+| Technology | Purpose |
+|---|---|
+| PHP | Backend |
+| MySQL | Database |
+| PDO | Database connection |
+| HTML | Structure |
+| CSS | Styling |
+| JavaScript | Interactivity |
+| InfinityFree | Hosting |
 
+## Live Demo
 
-\---
+Visit the live website:
 
+**[🚀 Open URLIO](https://pawar.rf.gd/urlio/)**
 
-
-\## About
-
-
-
-\*\*URLIO\*\* is a web-based URL shortener that turns long destination links into short, shareable URLs. Create links as a guest or sign in to manage them from your dashboard.
-
-
-
-\## Features
-
-
-
-\- Guest link shortening without registration
-
-\- User registration and login
-
-\- Guest-link transfer to user accounts
-
-\- Bulk URL shortening
-
-\- Custom short aliases
-
-\- Link expiry and click limits
-
-\- Optional password protection
-
-\- Click analytics
-
-\- QR code generation
-
-\- CSV export
-
-\- Admin panel
-
-\- Responsive design
-
-
-
-\## Tech Stack
-
-
-
-\- PHP
-
-\- MySQL / MariaDB
-
-\- PDO
-
-\- HTML, CSS, JavaScript
-
-\- InfinityFree Hosting
-
-
-
-\## Live Demo
-
-
-
-\*\*https://pawar.rf.gd/urlio/\*\*
-
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
 urlio/
-
 ├── assets/
-
 │   ├── css/
-
 │   ├── img/
-
 │   └── js/
-
 ├── includes/
-
 │   ├── bootstrap.php
-
 │   ├── config.php
-
 │   ├── layout.php
-
 │   └── secret.key
-
 ├── account.php
-
 ├── actions.php
-
 ├── admin.php
-
 ├── api.php
-
 ├── dashboard.php
-
 ├── export.php
-
 ├── go.php
-
 ├── index.php
-
 ├── install.php
-
 ├── link.php
-
 ├── login.php
-
 ├── logout.php
-
 └── register.php
-
 ```
 
+## Installation
 
+### Requirements
 
-\## Installation
+- PHP 8.0 or newer recommended
+- MySQL or MariaDB
+- PHP PDO MySQL extension
+- Apache or another PHP-compatible server
 
+### Setup Instructions
 
+1. Clone or download this repository.
+2. Create a MySQL database.
+3. Configure your database credentials in `includes/config.php`.
+4. Set the correct application URL.
+5. Start Apache and MySQL.
+6. Open URLIO in your browser.
+7. Complete the installation process if required.
+8. Remove `install.php` from the public server after installation.
 
-1\. Clone or download this repository.
+## How to Use
 
-2\. Create a MySQL database.
+1. Open the [URLIO website](https://pawar.rf.gd/urlio/).
+2. Enter your long destination URL.
+3. Generate your short link.
+4. Copy and share your new short URL.
 
-3\. Configure database credentials in `includes/config.php`.
+Create an account to access your dashboard and manage your links.
 
-4\. Set the correct application URL.
+## API
 
-5\. Start Apache and MySQL.
+### Coming Soon 🚧
 
-6\. Open the application in your browser.
+API access and public API documentation are planned for a future release.
 
-7\. Complete installation if required.
+Stay tuned for updates!
 
-8\. Remove the installer after setup.
-
-
-
-\## Usage
-
-
-
-1\. Visit the URLIO website.
-
-2\. Enter a long URL.
-
-3\. Generate your short link.
-
-4\. Copy and share it.
-
-
-
-Register to access your dashboard and manage your links.
-
-
-
-\## API
-
-
-
-\*\*Coming Soon\*\*
-
-
-
-API access and public API documentation are planned for a future update.
-
-
-
-\## Current Configuration
-
-
+## Current Configuration
 
 | Setting | Value |
-
 |---|---:|
+| Guest Link Validity | 30 Days |
+| Guest Creation Limit | 10 Links / Hour / IP |
+| Maximum Bulk Batch | 50 URLs |
 
-| Guest link validity | 30 days |
+*Configuration values may change in future updates.*
 
-| Guest creation limit | 10 links/hour/IP |
+## Security
 
-| Maximum bulk batch | 50 URLs |
+- Never publish database passwords or API keys.
+- Keep `includes/config.php` and `includes/secret.key` private.
+- Never upload private user data or database exports.
+- Remove the installer after setup.
+- Always use HTTPS on the live website.
+- Use strong passwords.
 
+## Project Status
 
+**URLIO is an ongoing personal project.**
 
-\## Security
+🌐 Website: [https://pawar.rf.gd/urlio/](https://pawar.rf.gd/urlio/)
 
+🔌 API: **Coming Soon**
 
+---
 
-\- Never publish database credentials or API keys.
+## License
 
-\- Keep `includes/config.php` and `includes/secret.key` private.
+No open-source license has currently been specified. All rights remain with the copyright holder. Reuse and redistribution are not automatically permitted.
 
-\- Do not upload user data or database exports.
+---
 
-\- Remove the installer after setup.
+<div align="center">
 
-\- Use HTTPS.
+**Made with ❤️ using PHP and MySQL**
 
-\- Use strong passwords.
+### URLIO – Short links. Simple sharing.
 
-
-
-\## Project Status
-
-
-
-URLIO is an ongoing personal project.
-
-
-
-\- Website: https://pawar.rf.gd/urlio/
-
-\- API: Coming Soon
-
-
-
-\## License
-
-
-
-No license has currently been specified. All rights remain with the copyright holder. Reuse and redistribution are not automatically permitted.
-
-
-
+</div>
