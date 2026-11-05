@@ -1,0 +1,9 @@
+@"
+includes/config.php
+includes/secret.key
+.env
+*.sql
+*.log
+.DS_Store
+Thumbs.db
+"@ | Set-Content .gitignore

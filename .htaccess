@@ -1,0 +1,17 @@
+Options -Indexes
+RewriteEngine On
+
+# Short link: /abc123  ->  go.php?c=abc123
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([A-Za-z0-9_-]{1,32})/?$ go.php?c=$1 [L,QSA]
+
+<FilesMatch "\.(lock|key|log|sql)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>

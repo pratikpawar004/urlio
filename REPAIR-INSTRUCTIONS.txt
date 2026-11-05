@@ -1,0 +1,25 @@
+URLIO DATABASE REPAIR
+=====================
+
+Why this repair is needed:
+The installer currently reports "Already installed" because includes/installed.lock exists.
+That message alone does not verify that every required table exists.
+
+Steps:
+1. Back up the current htdocs folder and database before changing anything.
+2. Upload/merge the files from this ZIP into htdocs. Do not delete your existing database.
+3. In InfinityFree File Manager, open htdocs/includes and delete the OLD installed.lock file.
+4. Open https://urlio.rf.gd/install.php
+5. Submit the setup form. Use an admin email and a strong password.
+   The installer uses CREATE TABLE IF NOT EXISTS, so it will create missing tables
+   without deleting existing tables or rows.
+6. When it says Installation complete, delete htdocs/install.php.
+7. Confirm htdocs/includes/installed.lock has been created again.
+8. Test guest shortening with https://example.com as the destination URL.
+
+If link creation still returns HTTP 500:
+- Open InfinityFree Control Panel -> Hosting Account -> Error Logs (if available).
+- Copy the newest PHP/MySQL error relating to actions.php and share only the error text.
+- Do not share your database password, control panel password, or secret.key.
+
+Database credentials are in includes/config.php. Keep APP_DEBUG=false on the live website.
